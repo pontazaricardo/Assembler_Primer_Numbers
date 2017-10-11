@@ -24,10 +24,13 @@ _Main:
 	# If the number is less than 2, tell the user to insert a number greater or equal to 2 and repeat
 	
 	blt	$t0,2,_SmallNumber	#Jump to _SmallNumber in case the number is less than 2
+	
+	
+	j _Main	
 
 _SmallNumber:
 
-	# Show the msg that $t0 is NOT 2-digit and goto _Start
+	# Display that the number is less than 2, and jump back to the start point of the main.
 	la      $a0, outOfBound_message01
 	li      $v0, 4
 	syscall
