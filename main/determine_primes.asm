@@ -4,6 +4,9 @@
 Message: .asciiz  "Please enter a number: "
 number1: .word 0
 
+outOfBound_message01: .asciiz "$t0 = "
+outOfBound_message02: .asciiz " is a number smaller than 2! Please insert a number greater or equal to 2.\n"
+
 .text
 _Main:
 
