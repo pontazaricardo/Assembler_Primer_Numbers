@@ -17,3 +17,10 @@ _Main:
 	syscall 
 	sw	$v0, number1 #Store the number in $v0
 	lw	$t0, number1 #Load the number in $t0
+
+	# If the number is less than 2, tell the user to insert a number greater or equal to 2 and repeat
+	
+	blt	$t0,2,_SmallNumber	#Jump to _SmallNumber in case the number is less than 2
+
+
+_SmallNumber:
