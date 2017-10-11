@@ -1,7 +1,7 @@
 .data
 # Messages to be displayed to the user
 
-Message: .asciiz  "Please enter a number: "
+Message: .asciiz  "Please enter a number (Enter 0 to exit): "
 number1: .word 0
 
 outOfBound_message01: .asciiz "$t0 = "
@@ -23,8 +23,8 @@ _Main:
 
 	# If the number is less than 2, tell the user to insert a number greater or equal to 2 and repeat
 	
+	beq	$t0,0,_Exit		#Branch to _Exit if number == 0.
 	blt	$t0,2,_SmallNumber	#Jump to _SmallNumber in case the number is less than 2
-	
 	
 	j _Main	
 
@@ -46,3 +46,7 @@ _SmallNumber:
 	# jump to _Main
 	
 	j _Main
+
+_Exit:
+	li	$v0, 10
+	syscall
