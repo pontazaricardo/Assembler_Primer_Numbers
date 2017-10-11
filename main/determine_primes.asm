@@ -1,0 +1,4 @@
+.data
+
+# Define sone messages
+
