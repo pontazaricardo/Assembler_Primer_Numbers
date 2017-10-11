@@ -41,6 +41,10 @@ _IsPrime:
 	la      $a0, message_isPrime_01
 	li      $v0, 4
 	syscall
+	
+	li $v0, 1
+	add $a0, $t0 $zero
+	syscall	    
 
 	j _Main	
 	
