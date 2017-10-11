@@ -27,7 +27,15 @@ _Main:
 	blt	$t0,2,_SmallNumber	#Jump to _SmallNumber in case the number is less than 2
 	
 	j _Main	
+	
+_IsPrime:
 
+	j _Main	
+	
+_IsNotPrime:	
+
+	j _Main	
+	
 _SmallNumber:
 
 	# Display that the number is less than 2, and jump back to the start point of the main.
