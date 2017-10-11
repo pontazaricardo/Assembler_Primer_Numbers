@@ -10,6 +10,9 @@ outOfBound_message02: .asciiz " is a number smaller than 2! Please insert a numb
 messsage_isPrime_01: .asciiz "$t0 = "
 messsage_isPrime_02: .asciiz " IS a prime number!\n"
 
+messsage_isNotPrime_01: .asciiz "$t0 = "
+messsage_isNotPrime_02: .asciiz " is NOT a prime number!\n"
+
 .text
 _Main:
 
