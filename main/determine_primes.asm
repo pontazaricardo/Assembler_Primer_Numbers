@@ -37,6 +37,11 @@ _Main:
 	
 _IsPrime:
 
+	# Display that the number is a primer, and jump back to the start point of the main.
+	la      $a0, message_isPrime_01
+	li      $v0, 4
+	syscall
+
 	j _Main	
 	
 _IsNotPrime:	
