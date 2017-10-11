@@ -25,5 +25,21 @@ _Main:
 	
 	blt	$t0,2,_SmallNumber	#Jump to _SmallNumber in case the number is less than 2
 
-
 _SmallNumber:
+
+	# Show the msg that $t0 is NOT 2-digit and goto _Start
+	la      $a0, outOfBound_message01
+	li      $v0, 4
+	syscall
+
+	li $v0, 1
+	add $a0, $t0 $zero
+	syscall	    
+
+	la      $a0, outOfBound_message02
+	li      $v0, 4
+	syscall
+
+	# jump to _Main
+	
+	j _Main
