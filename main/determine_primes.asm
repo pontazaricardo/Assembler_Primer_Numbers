@@ -7,6 +7,9 @@ number1: .word 0
 outOfBound_message01: .asciiz "$t0 = "
 outOfBound_message02: .asciiz " is a number smaller than 2! Please insert a number greater or equal to 2.\n"
 
+messsage_isPrime_01: .asciiz "$t0 = "
+messsage_isPrime_02: .asciiz " IS a prime number!\n"
+
 .text
 _Main:
 
@@ -25,6 +28,7 @@ _Main:
 	
 	beq	$t0,0,_Exit		#Branch to _Exit if number == 0.
 	blt	$t0,2,_SmallNumber	#Jump to _SmallNumber in case the number is less than 2
+	
 	
 	j _Main	
 	
