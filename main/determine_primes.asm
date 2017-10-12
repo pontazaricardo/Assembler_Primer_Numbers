@@ -24,8 +24,8 @@ _Main:
 	# Get the integer and store it in $t0
 	li	$v0, 5
 	syscall 
-	sw	$v0, number1 #Store the number in $v0
-	lw	$t0, number1 #Load the number in $t0
+	sw	$v0, number1 		#Store the number in $v0
+	lw	$t0, number1 		#Load the number in $t0
 
 	# If the number is less than 2, tell the user to insert a number greater or equal to 2 and repeat
 	
