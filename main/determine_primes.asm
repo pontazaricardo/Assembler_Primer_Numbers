@@ -54,7 +54,7 @@ _IsPrime:
 	
 	li $v0, 1
 	add $a0, $t0 $zero
-	syscall	    
+	syscall
 
 	la      $a0, message_isPrime_02
 	li      $v0, 4
@@ -67,6 +67,10 @@ _IsNotPrime:
 	# Display that the number is NOT a primer, and jump back to the start point of the main.
 	la      $a0, message_isNotPrime_01
 	li      $v0, 4
+	syscall
+
+	li $v0, 1
+	add $a0, $t0 $zero
 	syscall
 
 	j	_Main	
