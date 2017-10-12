@@ -41,6 +41,8 @@ _While:
 	div	$t0,$t7			#We calculate mflo = $t0/$t7 and mfhi = $t0 % $t7.
 	mfhi	$t6			#Save $t6=$t0 % $t7
 	
+	beq	$t6,0,_IsNotPrime	#If $t6==0, then we found a proper divisor greater than 1. We jump to _IsNotPrime.
+	
 	j _Main	
 	
 _IsPrime:
