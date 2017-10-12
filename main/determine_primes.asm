@@ -73,6 +73,10 @@ _IsNotPrime:
 	add $a0, $t0 $zero
 	syscall
 
+	la      $a0, message_isNotPrime_02
+	li      $v0, 4
+	syscall
+
 	j	_Main	
 	
 _SmallNumber:
