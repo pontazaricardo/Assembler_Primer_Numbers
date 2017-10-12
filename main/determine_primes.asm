@@ -36,8 +36,10 @@ _Main:
 	
 	sub	$t7,$t0,1		#Set $t7=$t0-1 (number-1)
 _While:
+	beq	$t7,1,_IsPrime		#If we reach $t7==1, then $t0 is a prime.
+	
 	div	$t0,$t7			#We calculate mflo = $t0/$t7 and mfhi = $t0 % $t7.
-		
+	mfhi	$t6			#Save $t6=$t0 % $t7
 	
 	j _Main	
 	
