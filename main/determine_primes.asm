@@ -34,6 +34,11 @@ _Main:
 	
 	# Here we determine if the number is prime
 	
+	sub	$t7,$t0,1		#Set $t7=$t0-1 (number-1)
+_While:
+	div	$t0,$t7			#We calculate mflo = $t0/$t7 and mfhi = $t0 % $t7.
+		
+	
 	j _Main	
 	
 _IsPrime:
