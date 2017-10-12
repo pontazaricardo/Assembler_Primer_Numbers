@@ -43,7 +43,7 @@ _While:
 	
 	beq	$t6,0,_IsNotPrime	#If $t6==0, then we found a proper divisor greater than 1. We jump to _IsNotPrime.
 	
-	j _Main	
+	j	_While			#Continue the while cycle
 	
 _IsPrime:
 
@@ -60,11 +60,11 @@ _IsPrime:
 	li      $v0, 4
 	syscall
 
-	j _Main	
+	j	_Main	
 
 _IsNotPrime:	
 
-	j _Main	
+	j	_Main	
 	
 _SmallNumber:
 
@@ -83,7 +83,7 @@ _SmallNumber:
 
 	# jump to _Main
 	
-	j _Main
+	j	_Main
 
 _Exit:
 	li	$v0, 10
