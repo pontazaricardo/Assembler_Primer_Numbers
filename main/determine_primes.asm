@@ -7,11 +7,11 @@ number1: .word 0
 outOfBound_message01: .asciiz "$t0 = "
 outOfBound_message02: .asciiz " is a number smaller than 2! Please insert a number greater or equal to 2.\n"
 
-messsage_isPrime_01: .asciiz "$t0 = "
-messsage_isPrime_02: .asciiz " IS a prime number!\n"
+message_isPrime_01: .asciiz "$t0 = "
+message_isPrime_02: .asciiz " IS a prime number!\n"
 
-messsage_isNotPrime_01: .asciiz "$t0 = "
-messsage_isNotPrime_02: .asciiz " is NOT a prime number!\n"
+message_isNotPrime_01: .asciiz "$t0 = "
+message_isNotPrime_02: .asciiz " is NOT a prime number!\n"
 
 .text
 _Main:
