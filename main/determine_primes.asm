@@ -63,6 +63,11 @@ _IsPrime:
 	j	_Main	
 
 _IsNotPrime:	
+	
+	# Display that the number is NOT a primer, and jump back to the start point of the main.
+	la      $a0, message_isNotPrime_01
+	li      $v0, 4
+	syscall
 
 	j	_Main	
 	
