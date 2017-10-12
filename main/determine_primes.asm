@@ -32,6 +32,7 @@ _Main:
 	beq	$t0,0,_Exit		#Branch to _Exit if number == 0.
 	blt	$t0,2,_SmallNumber	#Jump to _SmallNumber in case the number is less than 2
 	
+	# Here we determine if the number is prime
 	
 	j _Main	
 	
