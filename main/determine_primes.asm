@@ -43,7 +43,7 @@ _While:
 	
 	beq	$t6,0,_IsNotPrime	#If $t6==0, then we found a proper divisor greater than 1. We jump to _IsNotPrime.
 
-	sub	$t7,$t0,1		#Set $t7=$t0-1 (number-1)
+	sub	$t7,$t7,1		#Set $t7 = $t7-1
 		
 	j	_While			#Continue the while cycle
 	
