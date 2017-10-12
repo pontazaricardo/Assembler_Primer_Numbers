@@ -42,7 +42,9 @@ _While:
 	mfhi	$t6			#Save $t6=$t0 % $t7
 	
 	beq	$t6,0,_IsNotPrime	#If $t6==0, then we found a proper divisor greater than 1. We jump to _IsNotPrime.
-	
+
+	sub	$t7,$t0,1		#Set $t7=$t0-1 (number-1)
+		
 	j	_While			#Continue the while cycle
 	
 _IsPrime:
