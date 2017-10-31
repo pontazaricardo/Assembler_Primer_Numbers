@@ -2,7 +2,7 @@
 
 This is a program in Assembly Language that determines is a given number is prime or not.
 
-![demo](/images/pic.gif?raw=true)
+![demo](/images/run.gif?raw=true)
 
 ## Architecture
 
